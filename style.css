@@ -1,0 +1,259 @@
+/* inter-200 - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 200;
+    src: url('./assets/fonts/inter-v18-latin-200.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* inter-regular - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./assets/fonts/inter-v18-latin-regular.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* inter-600 - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    src: url('./assets/fonts/inter-v18-latin-600.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* inter-900 - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 900;
+    src: url('./assets/fonts/inter-v18-latin-900.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: whitesmoke;
+    font-family: 'Inter', monospace;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: hsl(290, 100%, 35%);
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: hsl(290, 100%, 60%);
+}
+
+
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 5vw;
+    position: sticky;
+    top: 0;
+    height: 4rem;
+    z-index: 100;
+    background-color: whitesmoke;
+    font-size: 1.2rem;
+    color: rgb(51, 51, 51);
+}
+
+.nav-left h1 {
+    font-size: 3rem;
+    margin: 0;
+    /* transition: font-size 0.3s ease; */
+}
+
+#navbar.scrolled .nav-left h1 {
+    font-size: 1.5rem;
+}
+
+.nav-right {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-right a {
+    color: hsl(0, 0%, 20%);
+    transition: color 0.3s;
+}
+
+.nav-right a:hover {
+    color: hsl(0, 0%, 45%)
+}
+
+.main {
+    width: 80%;
+    margin: 0 auto 2rem;
+}
+
+.featured-article img,
+.article img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.featured-article {
+    margin-bottom: 50px;
+}
+
+.featured-article h1 {
+    font-size: 2.5rem;
+    margin: 15px 0;
+    color: rgb(51, 51, 51);
+
+}
+
+.featured-article p {
+    font-size: 1.2rem;
+    color: rgb(85, 85, 85);
+    margin: 20px 0;
+}
+
+.smaller-articles {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.article {
+    flex: 1;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.article h2 {
+    font-size: 1.8rem;
+    color: rgb(51, 51, 51);
+    margin: 15px 0;
+}
+
+.article p {
+    font-size: 1rem;
+    color: rgb(85, 85, 85);
+}
+
+.article a {
+    margin-top: auto;
+}
+
+footer {
+    color: rgb(51, 51, 51);
+    font-size: 1.2rem;
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-icons {
+    margin-top: 10px;
+    display: flex;
+    gap: 1rem;
+    font-size: 1.5rem;
+}
+
+.fa-x-twitter {
+    margin-top: 5px;
+}
+
+.fa-linkedin-in {
+    margin-top: 7px;
+}
+
+.social-icons a {
+    color: rgb(33, 33, 33);
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: hsl(0, 0%, 25%);
+}
+
+@media screen and (max-height: 1345px) {
+    .article img {
+        min-height: 300px;
+    }
+}
+
+@media screen and (max-width: 1025px) {
+    .nav-left h1 {
+        font-size: 1.5rem !important;
+    }
+
+    #navbar {
+        font-size: 1rem;
+        ;
+    }
+
+    .main {
+        width: 90%;
+    }
+
+    .featured-article h1 {
+        font-size: 2.2rem;
+    }
+
+    .article h2 {
+        font-size: 1.7rem;
+    }
+
+    .smaller-articles {
+        flex-direction: column;
+        gap: 2rem;
+    }
+}
+
+ @media screen and (max-width: 600px) {
+    #navbar {
+        flex-direction: column;
+        /* align-items: flex-start; */
+        height: auto;
+        padding: 10px 5%;
+    }
+
+    .featured-article h1 {
+        font-size: 1.5rem;
+    }
+
+    .featured-article p {
+        font-size: 1rem;
+    }
+
+    .article { 
+        margin: 10px 0;
+        padding: 1rem;
+    }
+
+    .article h2 {
+        font-size: 1.3rem;
+    }
+} 
